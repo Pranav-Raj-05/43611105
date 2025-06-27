@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.figure(figsize=(6, 4))
+sns.histplot(df['sepal_length'], kde=True)
+plt.title("Histogram of Sepal Length")
+plt.show()
+plt.figure(figsize=(6, 4))
+sns.scatterplot(data=df, x='sepal_length', y='sepal_width', hue='species')
+plt.title("Sepal Length vs Sepal Width")
+plt.show()
+sns.pairplot(df, hue='species')
+plt.show()
+plt.figure(figsize=(6, 4))
+sns.boxplot(data=df, x='species', y='petal_width')
+plt.title("Boxplot of Petal Width by Species")
+plt.show()
